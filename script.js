@@ -299,6 +299,7 @@ function getTextCardType(value) {
   if (/^\d$/.test(value)) return "number";
   if (/^₹\d+$/.test(value)) return "money";
   if (/^[A-Z]$/.test(value)) return "letter";
+  if (value.length > 7) return "long-word";
   return "word";
 }
 
@@ -357,7 +358,7 @@ function createBoard(pairs) {
         : item.value;
 
     card.innerHTML = `
-            <div class="front-face${item.type === "number" ? " number-card" : item.type === "money" ? " money-card" : item.type === "letter" ? " letter-card" : item.type === "word" ? " word-card" : ""}">${frontFaceContent}</div>
+            <div class="front-face${item.type === "number" ? " number-card" : item.type === "money" ? " money-card" : item.type === "letter" ? " letter-card" : item.type === "long-word" ? " word-card long-word" : item.type === "word" ? " word-card" : ""}">${frontFaceContent}</div>
             <div class="back-face"></div>
         `;
 

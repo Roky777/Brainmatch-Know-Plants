@@ -249,9 +249,13 @@ h1 {
     font-size: clamp(0.65rem, 3.5vw, 1.1rem);
     line-height: 1.1;
     text-align: center;
-    overflow-wrap: anywhere;
-    word-break: break-word;
+    overflow-wrap: normal;
+    word-break: normal;
     hyphens: auto;
+}
+.card .front-face.word-card.long-word {
+    font-size: clamp(0.6rem, 2.5vw, 0.9rem);
+    white-space: nowrap;
 }
 .card .front-face img {
     max-width: 90%;
