@@ -76,7 +76,7 @@ let gameContent = null;
 // --- Progress Save System Integration ---
 let gameManager = null;
 let highestLevelPlayed = 1; // Default to level 1
-const MAX_GAME_LEVEL = 3; // Grade 1 Shape Friends currently has three levels
+const MAX_GAME_LEVEL = 3; // Grade 1 Money Match uses the backend-supported three-level campaign
 const TUTORIAL_STORAGE_KEY = "brainmatch_shape_friends_tutorial_seen";
 
 // Load game content from JSON file

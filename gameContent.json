@@ -1,22 +1,24 @@
 {
-  "gameMode": "imageToImage",
+  "gameMode": "textToImage",
   "content": {
     "science": {
       "level1": { "pairs": [
-        { "firstImage": "images/grade1-shape-friends/l1-football.png", "firstImageAlt": "A football", "secondImage": "images/grade1-shape-friends/l1-beach-ball.png", "secondImageAlt": "A beach ball" },
-        { "firstImage": "images/grade1-shape-friends/l1-matchbox.png", "firstImageAlt": "A matchbox", "secondImage": "images/grade1-shape-friends/l1-book.png", "secondImageAlt": "A book" }
+        { "a": "₹1", "image": "images/grade1-money-match/coin-1.svg", "imageAlt": "One rupee coin" },
+        { "a": "₹2", "image": "images/grade1-money-match/coin-2.svg", "imageAlt": "Two rupee coin" },
+        { "a": "₹5", "image": "images/grade1-money-match/coin-5.svg", "imageAlt": "Five rupee coin" },
+        { "a": "₹10", "image": "images/grade1-money-match/coin-10.svg", "imageAlt": "Ten rupee coin" }
       ] },
       "level2": { "pairs": [
-        { "firstImage": "images/grade1-shape-friends/l2-ball.png", "firstImageAlt": "A ball", "secondImage": "images/grade1-shape-friends/l2-orange.png", "secondImageAlt": "An orange" },
-        { "firstImage": "images/grade1-shape-friends/l2-matchbox.png", "firstImageAlt": "A matchbox", "secondImage": "images/grade1-shape-friends/l2-pencil-box.png", "secondImageAlt": "A pencil box" },
-        { "firstImage": "images/grade1-shape-friends/l2-party-hat.png", "firstImageAlt": "A party hat", "secondImage": "images/grade1-shape-friends/l2-funnel.png", "secondImageAlt": "A funnel" },
-        { "firstImage": "images/grade1-shape-friends/l2-glass.png", "firstImageAlt": "A drinking glass", "secondImage": "images/grade1-shape-friends/l2-water-bottle.png", "secondImageAlt": "A water bottle" }
+        { "a": "₹10", "image": "images/grade1-money-match/note-10.svg", "imageAlt": "Ten rupee note" },
+        { "a": "₹20", "image": "images/grade1-money-match/note-20.svg", "imageAlt": "Twenty rupee note" },
+        { "a": "₹50", "image": "images/grade1-money-match/note-50.svg", "imageAlt": "Fifty rupee note" },
+        { "a": "₹100", "image": "images/grade1-money-match/note-100.svg", "imageAlt": "One hundred rupee note" }
       ] },
       "level3": { "pairs": [
-        { "firstImage": "images/grade1-shape-friends/l3-watermelon.png", "firstImageAlt": "A watermelon", "secondImage": "images/grade1-shape-friends/l3-ball.png", "secondImageAlt": "A ball" },
-        { "firstImage": "images/grade1-shape-friends/l3-shoe-box.png", "firstImageAlt": "A shoe box", "secondImage": "images/grade1-shape-friends/l3-book.png", "secondImageAlt": "A book" },
-        { "firstImage": "images/grade1-shape-friends/l3-ice-cream-cone.png", "firstImageAlt": "An ice cream cone", "secondImage": "images/grade1-shape-friends/l3-party-hat.png", "secondImageAlt": "A party hat" },
-        { "firstImage": "images/grade1-shape-friends/l3-tumbler.png", "firstImageAlt": "A tumbler", "secondImage": "images/grade1-shape-friends/l3-water-bottle.png", "secondImageAlt": "A water bottle" }
+        { "a": "₹3", "image": "images/grade1-money-match/combo-3.svg", "imageAlt": "One rupee plus two rupees" },
+        { "a": "₹7", "image": "images/grade1-money-match/combo-7.svg", "imageAlt": "Two rupees plus five rupees" },
+        { "a": "₹10", "image": "images/grade1-money-match/combo-10.svg", "imageAlt": "Five rupees plus five rupees" },
+        { "a": "₹30", "image": "images/grade1-money-match/combo-30.svg", "imageAlt": "Ten rupees plus twenty rupees" }
       ] }
     }
   }
