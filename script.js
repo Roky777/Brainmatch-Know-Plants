@@ -241,6 +241,12 @@ function shuffle(array) {
   return array;
 }
 
+function getTextCardType(value) {
+  if (/^\d$/.test(value)) return "number";
+  if (/^₹\d+$/.test(value)) return "money";
+  return "text";
+}
+
 // --- Board Creation with Multiple Content Types Support ---
 function createBoard(pairs) {
   cardGrid.innerHTML = "";
@@ -257,7 +263,7 @@ function createBoard(pairs) {
       }
       // Text to Image mode
       else if (pair.image !== undefined) {
-        cardArray.push({ value: pair.a, match: pair.image, type: "number" });
+        cardArray.push({ value: pair.a, match: pair.image, type: getTextCardType(pair.a) });
         cardArray.push({
           value: pair.image,
           match: pair.a,
@@ -295,7 +301,7 @@ function createBoard(pairs) {
         : item.value;
 
     card.innerHTML = `
-            <div class="front-face${item.type === "number" ? " number-card" : ""}">${frontFaceContent}</div>
+            <div class="front-face${item.type === "number" ? " number-card" : item.type === "money" ? " money-card" : ""}">${frontFaceContent}</div>
             <div class="back-face"></div>
         `;
 
@@ -731,7 +737,9 @@ function clearAllTimers() {
 // --- How to Play Tutorial ---
 function renderTutorialPair(pair, card1Front, card2Front) {
   card1Front.classList.remove("number-card");
+  card1Front.classList.remove("money-card");
   card2Front.classList.remove("number-card");
+  card2Front.classList.remove("money-card");
   card1Front.innerHTML = "";
   card2Front.innerHTML = "";
 
@@ -740,7 +748,9 @@ function renderTutorialPair(pair, card1Front, card2Front) {
     card2Front.textContent = pair.b;
   } else if (pair.a !== undefined && pair.image !== undefined) {
     card1Front.textContent = pair.a;
-    card1Front.classList.add("number-card");
+    const textCardType = getTextCardType(pair.a);
+    if (textCardType === "number") card1Front.classList.add("number-card");
+    if (textCardType === "money") card1Front.classList.add("money-card");
     card2Front.innerHTML = `<img src="${pair.image}" alt="${pair.imageAlt || ""}">`;
   } else if (pair.firstImage !== undefined) {
     card1Front.innerHTML = `<img src="${pair.firstImage}" alt="${pair.firstImageAlt || ""}">`;
