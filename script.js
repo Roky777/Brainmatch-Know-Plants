@@ -324,6 +324,7 @@ function createBoard(pairs) {
           match: pair.a,
           type: "image",
           alt: pair.imageAlt,
+          imageClass: pair.imageClass,
         });
       }
     }
@@ -352,7 +353,7 @@ function createBoard(pairs) {
 
     const frontFaceContent =
       item.type === "image"
-        ? `<img src="${item.value}" alt="${item.alt || ""}" />`
+        ? `<img class="${item.imageClass || ""}" src="${item.value}" alt="${item.alt || ""}" />`
         : item.value;
 
     card.innerHTML = `

@@ -248,6 +248,10 @@ h1 {
     object-fit: contain;
     border-radius: 5px;
 }
+.card .front-face img.body-part-image {
+    max-width: 78%;
+    max-height: 78%;
+}
 .card .back-face { 
     background-image: url('card4.png'); 
 }
