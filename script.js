@@ -455,6 +455,7 @@ function handleReflexTimeout() {
 // --- Game Flow & Screen Management ---
 function peekAtStart(duration, callback) {
     gameState.lockBoard = true;
+    gameContainer.classList.add("is-peeking");
     const cards = document.querySelectorAll(".card");
     const blocks = document.querySelectorAll('.timer-block');
     // The 'countdownText' variable has been removed
@@ -493,6 +494,7 @@ function peekAtStart(duration, callback) {
 
     setTimeout(() => {
         gameState.lockBoard = false;
+        gameContainer.classList.remove("is-peeking");
         peekTimer.classList.add('hidden');
         // Reset blocks for the next round
         blocks.forEach(block => block.classList.remove('inactive'));
