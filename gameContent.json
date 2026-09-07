@@ -1,0 +1,25 @@
+{
+  "gameMode": "mixed",
+  "content": {
+    "science": {
+      "level1": { "pairs": [
+        { "a": "1", "image": "images/grade1-number-friends/dots-1.svg", "imageAlt": "One dot" },
+        { "a": "2", "image": "images/grade1-number-friends/dots-2.svg", "imageAlt": "Two dots" },
+        { "a": "3", "image": "images/grade1-number-friends/dots-3.svg", "imageAlt": "Three dots" },
+        { "a": "4", "image": "images/grade1-number-friends/dots-4.svg", "imageAlt": "Four dots" }
+      ] },
+      "level2": { "pairs": [
+        { "a": "2", "image": "images/grade1-number-friends/fingers-2.svg", "imageAlt": "Two fingers" },
+        { "a": "3", "image": "images/grade1-number-friends/fingers-3.svg", "imageAlt": "Three fingers" },
+        { "a": "4", "image": "images/grade1-number-friends/fingers-4.svg", "imageAlt": "Four fingers" },
+        { "a": "5", "image": "images/grade1-number-friends/fingers-5.svg", "imageAlt": "Five fingers" }
+      ] },
+      "level3": { "pairs": [
+        { "firstImage": "images/grade1-number-friends/fingers-1.svg", "firstImageAlt": "One finger", "secondImage": "images/grade1-number-friends/dots-1.svg", "secondImageAlt": "One dot" },
+        { "firstImage": "images/grade1-number-friends/fingers-2.svg", "firstImageAlt": "Two fingers", "secondImage": "images/grade1-number-friends/dots-2.svg", "secondImageAlt": "Two dots" },
+        { "firstImage": "images/grade1-number-friends/fingers-3.svg", "firstImageAlt": "Three fingers", "secondImage": "images/grade1-number-friends/dots-3.svg", "secondImageAlt": "Three dots" },
+        { "firstImage": "images/grade1-number-friends/fingers-4.svg", "firstImageAlt": "Four fingers", "secondImage": "images/grade1-number-friends/dots-4.svg", "secondImageAlt": "Four dots" }
+      ] }
+    }
+  }
+}
