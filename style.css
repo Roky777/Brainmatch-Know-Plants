@@ -267,6 +267,10 @@ h1 {
     max-width: 78%;
     max-height: 78%;
 }
+.card .front-face img.animal-image {
+    max-width: 76%;
+    max-height: 76%;
+}
 .card .back-face { 
     background-image: url('card4.png'); 
 }
