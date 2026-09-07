@@ -231,7 +231,7 @@ h1 {
 }
 .card .front-face.money-card {
     font-family: 'Mochiy Pop One', sans-serif;
-    font-size: clamp(1.35rem, 5vw, 2rem);
+    font-size: clamp(1.2rem, 4vw, 1.75rem);
     color: #4b4b4b;
     white-space: nowrap;
 }
@@ -437,7 +437,7 @@ h1 {
 }
 
 .tutorial-front.money-card {
-    font-size: clamp(1.35rem, 7vw, 2rem);
+    font-size: clamp(1.2rem, 6vw, 1.75rem);
     color: #4b4b4b;
     white-space: nowrap;
 }
