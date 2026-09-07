@@ -205,6 +205,8 @@ h1 {
     gap: clamp(10px, 2vw, 20px);
     perspective: 1000px;
     width: 100%;
+    max-width: 100%;
+    min-width: 0;
 }
 
 .card-grid--two-by-two {
@@ -597,6 +599,7 @@ h1 {
     .game-container {
         width: calc(100% - 28px);
         padding: 18px;
+        box-sizing: border-box;
     }
 
     header { margin-bottom: 14px; }

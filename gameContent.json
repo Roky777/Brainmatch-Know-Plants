@@ -19,6 +19,32 @@
         { "a": "₹7", "image": "images/grade1-money-match/combo-7.svg", "imageAlt": "Two rupees plus five rupees" },
         { "a": "₹10", "image": "images/grade1-money-match/combo-10.svg", "imageAlt": "Five rupees plus five rupees" },
         { "a": "₹30", "image": "images/grade1-money-match/combo-30.svg", "imageAlt": "Ten rupees plus twenty rupees" }
+      ] },
+      "level4": { "pairs": [
+        { "a": "₹1", "image": "images/grade1-money-match/coin-1.svg", "imageAlt": "One rupee coin" },
+        { "a": "₹3", "image": "images/grade1-money-match/combo-3.svg", "imageAlt": "One rupee plus two rupees" },
+        { "a": "₹10", "image": "images/grade1-money-match/note-10.svg", "imageAlt": "Ten rupee note" },
+        { "a": "₹12", "image": "images/grade1-money-match/combo-12.svg", "imageAlt": "Ten rupees plus two rupees" },
+        { "a": "₹15", "image": "images/grade1-money-match/combo-15.svg", "imageAlt": "Ten rupees plus five rupees" },
+        { "a": "₹20", "image": "images/grade1-money-match/note-20.svg", "imageAlt": "Twenty rupee note" },
+        { "a": "₹25", "image": "images/grade1-money-match/combo-25.svg", "imageAlt": "Twenty rupees plus five rupees" },
+        { "a": "₹30", "image": "images/grade1-money-match/combo-30.svg", "imageAlt": "Ten rupees plus twenty rupees" }
+      ] },
+      "level5": { "pairs": [
+        { "a": "₹5", "image": "images/grade1-money-match/combo-5.svg", "imageAlt": "One rupee plus two rupees plus two rupees" },
+        { "a": "₹10", "image": "images/grade1-money-match/coin-10.svg", "imageAlt": "Ten rupee coin" },
+        { "a": "₹20", "image": "images/grade1-money-match/combo-20.svg", "imageAlt": "Two ten rupee coins" },
+        { "a": "₹25", "image": "images/grade1-money-match/combo-25.svg", "imageAlt": "Twenty rupees plus five rupees" },
+        { "a": "₹30", "image": "images/grade1-money-match/combo-30.svg", "imageAlt": "Ten rupees plus twenty rupees" },
+        { "a": "₹50", "image": "images/grade1-money-match/combo-50.svg", "imageAlt": "Twenty rupees plus twenty rupees plus ten rupees" },
+        { "a": "₹70", "image": "images/grade1-money-match/combo-70.svg", "imageAlt": "Fifty rupees plus twenty rupees" },
+        { "a": "₹100", "image": "images/grade1-money-match/combo-100.svg", "imageAlt": "Fifty rupees plus fifty rupees" }
+      ] },
+      "level6": { "pairs": [
+        { "firstImage": "images/grade1-money-match/coin-10.svg", "firstImageAlt": "Ten rupee coin", "secondImage": "images/grade1-money-match/note-10.svg", "secondImageAlt": "Ten rupee note" },
+        { "firstImage": "images/grade1-money-match/combo-20.svg", "firstImageAlt": "Two ten rupee coins", "secondImage": "images/grade1-money-match/note-20.svg", "secondImageAlt": "Twenty rupee note" },
+        { "firstImage": "images/grade1-money-match/combo-30.svg", "firstImageAlt": "Ten rupees plus twenty rupees", "secondImage": "images/grade1-money-match/combo-30-alt.svg", "secondImageAlt": "Three ten rupee coins" },
+        { "firstImage": "images/grade1-money-match/combo-100.svg", "firstImageAlt": "Fifty rupees plus fifty rupees", "secondImage": "images/grade1-money-match/note-100.svg", "secondImageAlt": "One hundred rupee note" }
       ] }
     }
   }

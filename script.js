@@ -76,7 +76,7 @@ let gameContent = null;
 // --- Progress Save System Integration ---
 let gameManager = null;
 let highestLevelPlayed = 1; // Default to level 1
-const MAX_GAME_LEVEL = 3; // Grade 1 Money Match uses the backend-supported three-level campaign
+const MAX_GAME_LEVEL = 6;
 const TUTORIAL_STORAGE_KEY = "brainmatch_shape_friends_tutorial_seen";
 
 // Load game content from JSON file
@@ -203,6 +203,18 @@ function calculateXP(level, turns) {
       if (turns <= 16) return 100;
       if (turns <= 20) return 80;
       return 60;
+    case 4:
+      if (turns <= 24) return 120;
+      if (turns <= 30) return 100;
+      return 80;
+    case 5:
+      if (turns <= 26) return 140;
+      if (turns <= 34) return 120;
+      return 100;
+    case 6:
+      if (turns <= 12) return 160;
+      if (turns <= 16) return 140;
+      return 120;
     default:
       return 0;
   }
@@ -222,6 +234,21 @@ function calculateCampaignStars(level, turns) {
   if (level === 3) {
     if (xp === 100) return 3;
     if (xp === 80) return 2;
+    return 1;
+  }
+  if (level === 4) {
+    if (xp === 120) return 3;
+    if (xp === 100) return 2;
+    return 1;
+  }
+  if (level === 5) {
+    if (xp === 140) return 3;
+    if (xp === 120) return 2;
+    return 1;
+  }
+  if (level === 6) {
+    if (xp === 160) return 3;
+    if (xp === 140) return 2;
     return 1;
   }
   return 0;
@@ -650,10 +677,10 @@ function handleCampaignWin() {
 }
 
 function calculateFinalStars(totalXP) {
-  if (totalXP >= 150) {
-    return 3; // 3 stars for scores 150 and above
-  } else if (totalXP >= 70) {
-    return 2; // 2 stars for scores between 70 and 149
+  if (totalXP >= 520) {
+    return 3;
+  } else if (totalXP >= 300) {
+    return 2;
   } else {
     return 1; // 1 star for scores below 70
   }
