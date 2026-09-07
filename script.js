@@ -76,7 +76,7 @@ let gameContent = null;
 // --- Progress Save System Integration ---
 let gameManager = null;
 let highestLevelPlayed = 1; // Default to level 1
-const MAX_GAME_LEVEL = 6;
+const MAX_GAME_LEVEL = 9;
 const TUTORIAL_STORAGE_KEY = "brainmatch_shape_friends_tutorial_seen";
 
 // Load game content from JSON file
@@ -200,20 +200,32 @@ function calculateXP(level, turns) {
       if (turns <= 18) return 50;
       return 40;
     case 3:
-      if (turns <= 16) return 100;
-      if (turns <= 20) return 80;
+      if (turns <= 12) return 80;
+      if (turns <= 16) return 70;
       return 60;
     case 4:
-      if (turns <= 24) return 120;
-      if (turns <= 30) return 100;
-      return 80;
+      if (turns <= 12) return 100;
+      if (turns <= 16) return 85;
+      return 70;
     case 5:
-      if (turns <= 26) return 140;
-      if (turns <= 34) return 120;
-      return 100;
+      if (turns <= 12) return 110;
+      if (turns <= 16) return 95;
+      return 80;
     case 6:
-      if (turns <= 12) return 160;
-      if (turns <= 16) return 140;
+      if (turns <= 12) return 120;
+      if (turns <= 16) return 105;
+      return 90;
+    case 7:
+      if (turns <= 12) return 130;
+      if (turns <= 16) return 115;
+      return 100;
+    case 8:
+      if (turns <= 12) return 140;
+      if (turns <= 16) return 125;
+      return 110;
+    case 9:
+      if (turns <= 24) return 160;
+      if (turns <= 32) return 140;
       return 120;
     default:
       return 0;
@@ -232,21 +244,36 @@ function calculateCampaignStars(level, turns) {
     return 1;
   }
   if (level === 3) {
-    if (xp === 100) return 3;
-    if (xp === 80) return 2;
+    if (xp === 80) return 3;
+    if (xp === 70) return 2;
     return 1;
   }
   if (level === 4) {
-    if (xp === 120) return 3;
-    if (xp === 100) return 2;
+    if (xp === 100) return 3;
+    if (xp === 85) return 2;
     return 1;
   }
   if (level === 5) {
-    if (xp === 140) return 3;
-    if (xp === 120) return 2;
+    if (xp === 110) return 3;
+    if (xp === 95) return 2;
     return 1;
   }
   if (level === 6) {
+    if (xp === 120) return 3;
+    if (xp === 105) return 2;
+    return 1;
+  }
+  if (level === 7) {
+    if (xp === 130) return 3;
+    if (xp === 115) return 2;
+    return 1;
+  }
+  if (level === 8) {
+    if (xp === 140) return 3;
+    if (xp === 125) return 2;
+    return 1;
+  }
+  if (level === 9) {
     if (xp === 160) return 3;
     if (xp === 140) return 2;
     return 1;
@@ -271,6 +298,7 @@ function shuffle(array) {
 function getTextCardType(value) {
   if (/^\d$/.test(value)) return "number";
   if (/^₹\d+$/.test(value)) return "money";
+  if (/^[A-Z]$/.test(value)) return "letter";
   return "text";
 }
 
@@ -285,8 +313,8 @@ function createBoard(pairs) {
     if (pair.a !== undefined) {
       // Text to Text mode
       if (pair.b !== undefined) {
-        cardArray.push({ value: pair.a, match: pair.b, type: "text" });
-        cardArray.push({ value: pair.b, match: pair.a, type: "text" });
+        cardArray.push({ value: pair.a, match: pair.b, type: getTextCardType(pair.a) });
+        cardArray.push({ value: pair.b, match: pair.a, type: getTextCardType(pair.b) });
       }
       // Text to Image mode
       else if (pair.image !== undefined) {
@@ -328,7 +356,7 @@ function createBoard(pairs) {
         : item.value;
 
     card.innerHTML = `
-            <div class="front-face${item.type === "number" ? " number-card" : item.type === "money" ? " money-card" : ""}">${frontFaceContent}</div>
+            <div class="front-face${item.type === "number" ? " number-card" : item.type === "money" ? " money-card" : item.type === "letter" ? " letter-card" : ""}">${frontFaceContent}</div>
             <div class="back-face"></div>
         `;
 
@@ -580,11 +608,9 @@ function startGame(level) {
 function startReflexMode() {
   resetGameState();
   gameState.gameMode = "reflex";
-  const allPairs = [
-    ...gameContent.content.science.level1.pairs,
-    ...gameContent.content.science.level2.pairs,
-    ...gameContent.content.science.level3.pairs,
-  ];
+  const allPairs = Array.from({ length: MAX_GAME_LEVEL }, (_, index) =>
+    gameContent.content.science[`level${index + 1}`].pairs
+  ).flat();
   const reflexPairs = shuffle(allPairs).slice(0, 8);
   startScreen.classList.add("hidden");
   winScreen.classList.add("hidden");
@@ -677,9 +703,9 @@ function handleCampaignWin() {
 }
 
 function calculateFinalStars(totalXP) {
-  if (totalXP >= 520) {
+  if (totalXP >= 900) {
     return 3;
-  } else if (totalXP >= 300) {
+  } else if (totalXP >= 540) {
     return 2;
   } else {
     return 1; // 1 star for scores below 70
@@ -765,8 +791,10 @@ function clearAllTimers() {
 function renderTutorialPair(pair, card1Front, card2Front) {
   card1Front.classList.remove("number-card");
   card1Front.classList.remove("money-card");
+  card1Front.classList.remove("letter-card");
   card2Front.classList.remove("number-card");
   card2Front.classList.remove("money-card");
+  card2Front.classList.remove("letter-card");
   card1Front.innerHTML = "";
   card2Front.innerHTML = "";
 
@@ -778,6 +806,7 @@ function renderTutorialPair(pair, card1Front, card2Front) {
     const textCardType = getTextCardType(pair.a);
     if (textCardType === "number") card1Front.classList.add("number-card");
     if (textCardType === "money") card1Front.classList.add("money-card");
+    if (textCardType === "letter") card1Front.classList.add("letter-card");
     card2Front.innerHTML = `<img src="${pair.image}" alt="${pair.imageAlt || ""}">`;
   } else if (pair.firstImage !== undefined) {
     card1Front.innerHTML = `<img src="${pair.firstImage}" alt="${pair.firstImageAlt || ""}">`;
