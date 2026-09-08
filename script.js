@@ -76,7 +76,7 @@ let gameContent = null;
 // --- Progress Save System Integration ---
 let gameManager = null;
 let highestLevelPlayed = 1; // Default to level 1
-const MAX_GAME_LEVEL = 2;
+const MAX_GAME_LEVEL = 3;
 const TUTORIAL_STORAGE_KEY = "brainmatch_shape_friends_tutorial_seen";
 
 // Load game content from JSON file
@@ -705,9 +705,9 @@ function handleCampaignWin() {
 }
 
 function calculateFinalStars(totalXP) {
-  if (totalXP >= 100) {
+  if (totalXP >= 150) {
     return 3;
-  } else if (totalXP >= 60) {
+  } else if (totalXP >= 90) {
     return 2;
   } else {
     return 1; // 1 star for scores below 70
