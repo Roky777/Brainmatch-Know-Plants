@@ -336,12 +336,14 @@ function createBoard(pairs) {
         match: pair.secondImage,
         type: "image",
         alt: pair.firstImageAlt,
+        imageClass: pair.firstImageClass,
       });
       cardArray.push({
         value: pair.secondImage,
         match: pair.firstImage,
         type: "image",
         alt: pair.secondImageAlt,
+        imageClass: pair.secondImageClass,
       });
     }
   });

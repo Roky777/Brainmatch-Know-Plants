@@ -271,6 +271,9 @@ h1 {
     max-width: 76%;
     max-height: 76%;
 }
+.card .front-face img.shadow-silhouette {
+    filter: brightness(0) saturate(100%) opacity(0.9);
+}
 .card .back-face { 
     background-image: url('card4.png'); 
 }
