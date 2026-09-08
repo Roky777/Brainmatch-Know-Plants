@@ -258,11 +258,12 @@ h1 {
     white-space: nowrap;
 }
 .card .front-face.phrase-card {
-    padding: 6px;
-    font-size: clamp(0.55rem, 2.6vw, 0.85rem);
-    line-height: 1.1;
+    padding: 5px;
+    font-size: clamp(0.64rem, 3vw, 1rem);
+    line-height: 1.05;
     text-align: center;
-    white-space: normal;
+    white-space: pre-line;
+    overflow-wrap: anywhere;
 }
 .card .front-face img {
     max-width: 90%;
