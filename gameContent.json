@@ -1,1 +1,31 @@
-{"gameMode":"textToImage","content":{"science":{"level1":{"pairs":[{"a":"Hop","image":"images/grade2-animal-actions/rabbit.svg","imageAlt":"Rabbit"},{"a":"Swim","image":"images/grade2-animal-actions/fish.svg","imageAlt":"Fish"},{"a":"Fly","image":"images/grade2-animal-actions/bird.svg","imageAlt":"Bird"},{"a":"Climb","image":"images/grade2-animal-actions/squirrel.svg","imageAlt":"Squirrel"}]},"level2":{"pairs":[{"a":"Trot","image":"images/grade2-animal-actions/horse.svg","imageAlt":"Horse"},{"a":"Leap","image":"images/grade2-animal-actions/frog.svg","imageAlt":"Frog"},{"a":"Crawl","image":"images/grade2-animal-actions/snake.svg","imageAlt":"Snake"},{"a":"Swing","image":"images/grade2-animal-actions/monkey.svg","imageAlt":"Monkey"}]},"level3":{"pairs":[{"a":"Hop","image":"images/grade2-animal-actions/rabbit.svg","imageAlt":"Rabbit"},{"a":"Swim","image":"images/grade2-animal-actions/fish.svg","imageAlt":"Fish"},{"a":"Fly","image":"images/grade2-animal-actions/bird.svg","imageAlt":"Bird"},{"a":"Climb","image":"images/grade2-animal-actions/squirrel.svg","imageAlt":"Squirrel"},{"a":"Trot","image":"images/grade2-animal-actions/horse.svg","imageAlt":"Horse"},{"a":"Leap","image":"images/grade2-animal-actions/frog.svg","imageAlt":"Frog"},{"a":"Crawl","image":"images/grade2-animal-actions/snake.svg","imageAlt":"Snake"},{"a":"Swing","image":"images/grade2-animal-actions/monkey.svg","imageAlt":"Monkey"}]}}}}
+{
+  "gameMode": "textToImage",
+  "content": {
+    "science": {
+      "level1": {
+        "pairs": [
+          { "a": "Absorb Water", "textClass": "phrase", "image": "images/grade3-know-plants/roots.svg", "imageAlt": "Roots" },
+          { "a": "Support Plant", "textClass": "phrase", "image": "images/grade3-know-plants/stem.svg", "imageAlt": "Stem" },
+          { "a": "Make Food", "textClass": "phrase", "image": "images/grade3-know-plants/leaf.svg", "imageAlt": "Leaf" },
+          { "a": "Make Fruit", "textClass": "phrase", "image": "images/grade3-know-plants/flower.svg", "imageAlt": "Flower" },
+          { "a": "Protect Seeds", "textClass": "phrase", "image": "images/grade3-know-plants/fruit.svg", "imageAlt": "Fruit" },
+          { "a": "New Plant", "textClass": "phrase", "image": "images/grade3-know-plants/seed.svg", "imageAlt": "Seed" },
+          { "a": "Outer Cover", "textClass": "phrase", "image": "images/grade3-know-plants/bark.svg", "imageAlt": "Bark" },
+          { "a": "Hold Branches", "textClass": "phrase", "image": "images/grade3-know-plants/trunk.svg", "imageAlt": "Trunk" }
+        ]
+      },
+      "level2": {
+        "pairs": [
+          { "a": "Mango · Tree", "textClass": "phrase", "image": "images/grade3-know-plants/mango.svg", "imageAlt": "Mango" },
+          { "a": "Rose · Shrub", "textClass": "phrase", "image": "images/grade3-know-plants/rose.svg", "imageAlt": "Rose" },
+          { "a": "Tulsi · Shrub", "textClass": "phrase", "image": "images/grade3-know-plants/tulsi.svg", "imageAlt": "Tulsi" },
+          { "a": "Mint · Herb", "textClass": "phrase", "image": "images/grade3-know-plants/mint.svg", "imageAlt": "Mint" },
+          { "a": "Tomato · Herb", "textClass": "phrase", "image": "images/grade3-know-plants/tomato.svg", "imageAlt": "Tomato" },
+          { "a": "Wheat · Grass", "textClass": "phrase", "image": "images/grade3-know-plants/wheat.svg", "imageAlt": "Wheat" },
+          { "a": "Money · Climber", "textClass": "phrase", "image": "images/grade3-know-plants/moneyplant.svg", "imageAlt": "Money plant" },
+          { "a": "Pumpkin · Creeper", "textClass": "phrase", "image": "images/grade3-know-plants/pumpkin.svg", "imageAlt": "Pumpkin" }
+        ]
+      }
+    }
+  }
+}

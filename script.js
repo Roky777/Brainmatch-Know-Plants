@@ -76,7 +76,7 @@ let gameContent = null;
 // --- Progress Save System Integration ---
 let gameManager = null;
 let highestLevelPlayed = 1; // Default to level 1
-const MAX_GAME_LEVEL = 3;
+const MAX_GAME_LEVEL = 2;
 const TUTORIAL_STORAGE_KEY = "brainmatch_shape_friends_tutorial_seen";
 
 // Load game content from JSON file
@@ -319,7 +319,7 @@ function createBoard(pairs) {
       }
       // Text to Image mode
       else if (pair.image !== undefined) {
-        cardArray.push({ value: pair.a, match: pair.image, type: getTextCardType(pair.a) });
+        cardArray.push({ value: pair.a, match: pair.image, type: pair.textClass || getTextCardType(pair.a) });
         cardArray.push({
           value: pair.image,
           match: pair.a,
@@ -360,7 +360,7 @@ function createBoard(pairs) {
         : item.value;
 
     card.innerHTML = `
-            <div class="front-face${item.type === "number" ? " number-card" : item.type === "money" ? " money-card" : item.type === "letter" ? " letter-card" : item.type === "long-word" ? " word-card long-word" : item.type === "word" ? " word-card" : ""}">${frontFaceContent}</div>
+            <div class="front-face${item.type === "number" ? " number-card" : item.type === "money" ? " money-card" : item.type === "letter" ? " letter-card" : item.type === "phrase" ? " phrase-card" : item.type === "long-word" ? " word-card long-word" : item.type === "word" ? " word-card" : ""}">${frontFaceContent}</div>
             <div class="back-face"></div>
         `;
 
@@ -707,9 +707,9 @@ function handleCampaignWin() {
 }
 
 function calculateFinalStars(totalXP) {
-  if (totalXP >= 150) {
+  if (totalXP >= 100) {
     return 3;
-  } else if (totalXP >= 90) {
+  } else if (totalXP >= 60) {
     return 2;
   } else {
     return 1; // 1 star for scores below 70
