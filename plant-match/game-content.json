@@ -8,7 +8,8 @@
     "assetBase": "./assets/cards/",
     "menuGreeting": "Ready to explore plants with Sparky?",
     "matchPrompt": "Find the plant picture and its match!",
-    "resultMessage": "You found every plant match."
+    "resultMessage": "You found every plant match.",
+    "artVersion": "card-art-2"
   },
   "play": {
     "fixedPairs": true,
