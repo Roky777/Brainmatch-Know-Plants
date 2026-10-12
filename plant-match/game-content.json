@@ -1,0 +1,576 @@
+{
+  "schemaVersion": 1,
+  "variant": {
+    "id": "plant-match",
+    "title": "Plant Match",
+    "subtitle": "A little plant adventure",
+    "objective": "Match plant parts with jobs, and plants with their types.",
+    "assetBase": "./assets/cards/",
+    "menuGreeting": "Ready to explore plants with Sparky?",
+    "matchPrompt": "Find the plant picture and its match!",
+    "resultMessage": "You found every plant match."
+  },
+  "play": {
+    "fixedPairs": true,
+    "shufflePairs": true,
+    "difficultyGroups": [
+      {
+        "id": "gentle",
+        "name": "Easy",
+        "description": "4 cards · 2 pairs",
+        "rounds": [
+          "1",
+          "2"
+        ]
+      },
+      {
+        "id": "growing",
+        "name": "Medium",
+        "description": "6 cards · 3 pairs",
+        "rounds": [
+          "3",
+          "4"
+        ]
+      },
+      {
+        "id": "clever",
+        "name": "Hard",
+        "description": "8 cards · 4 pairs",
+        "rounds": [
+          "5",
+          "6"
+        ]
+      }
+    ]
+  },
+  "features": {
+    "picnic": false
+  },
+  "progression": {
+    "xp": {
+      "rewards": {
+        "practice": 7,
+        "challenge": 4
+      },
+      "completionBonus": 2
+    }
+  },
+  "worlds": {
+    "dream": {
+      "id": "dream",
+      "name": "Plant Meadow",
+      "shortName": "Meadow",
+      "description": "Discover parts and plant types",
+      "skin": "meadow",
+      "menuTitleLines": [
+        "Plant",
+        "Match"
+      ],
+      "menuKicker": "A little plant adventure",
+      "cloudAsset": "sparky-seat-cloud-v1.webp",
+      "unlockMessage": "More plant matches are ready!"
+    },
+    "seasons": {
+      "id": "seasons",
+      "name": "Plant Parade",
+      "shortName": "Parade",
+      "description": "Discover parts and plant types",
+      "skin": "parade",
+      "menuTitleLines": [
+        "Plant",
+        "Parade"
+      ],
+      "menuKicker": "A little plant adventure",
+      "cloudAsset": "season-sparky-cloud-v1.webp",
+      "unlockMessage": "More plant matches are ready!"
+    },
+    "neon": {
+      "id": "neon",
+      "name": "Plant Lab",
+      "shortName": "Lab",
+      "description": "Discover parts and plant types",
+      "skin": "space-lab",
+      "menuTitleLines": [
+        "Plant",
+        "Lab"
+      ],
+      "menuKicker": "A little plant adventure",
+      "cloudAsset": "neon-sparky-cloud-v1.webp",
+      "unlockMessage": "More plant matches are ready!"
+    }
+  },
+  "categories": {
+    "roots": {
+      "name": "Absorb Water",
+      "detail": "Roots matches Absorb Water.",
+      "color": "#78b87d"
+    },
+    "stem": {
+      "name": "Support Plant",
+      "detail": "Stem matches Support Plant.",
+      "color": "#78b87d"
+    },
+    "leaf": {
+      "name": "Make Food",
+      "detail": "Leaf matches Make Food.",
+      "color": "#78b87d"
+    },
+    "flower": {
+      "name": "Make Fruit",
+      "detail": "Flower matches Make Fruit.",
+      "color": "#78b87d"
+    },
+    "fruit": {
+      "name": "Protect Seeds",
+      "detail": "Fruit matches Protect Seeds.",
+      "color": "#78b87d"
+    },
+    "seed": {
+      "name": "New Plant",
+      "detail": "Seed matches New Plant.",
+      "color": "#78b87d"
+    },
+    "bark": {
+      "name": "Outer Cover",
+      "detail": "Bark matches Outer Cover.",
+      "color": "#78b87d"
+    },
+    "trunk": {
+      "name": "Hold Branches",
+      "detail": "Trunk matches Hold Branches.",
+      "color": "#78b87d"
+    },
+    "mango": {
+      "name": "Tree",
+      "detail": "Mango matches Tree.",
+      "color": "#78b87d"
+    },
+    "rose": {
+      "name": "Shrub",
+      "detail": "Rose matches Shrub.",
+      "color": "#78b87d"
+    },
+    "tulsi": {
+      "name": "Shrub",
+      "detail": "Tulsi matches Shrub.",
+      "color": "#78b87d"
+    },
+    "mint": {
+      "name": "Herb",
+      "detail": "Mint matches Herb.",
+      "color": "#78b87d"
+    },
+    "tomato": {
+      "name": "Herb",
+      "detail": "Tomato matches Herb.",
+      "color": "#78b87d"
+    },
+    "wheat": {
+      "name": "Grass",
+      "detail": "Wheat matches Grass.",
+      "color": "#78b87d"
+    },
+    "moneyplant": {
+      "name": "Climber",
+      "detail": "Money Plant matches Climber.",
+      "color": "#78b87d"
+    },
+    "pumpkin": {
+      "name": "Creeper",
+      "detail": "Pumpkin matches Creeper.",
+      "color": "#78b87d"
+    }
+  },
+  "items": {
+    "picture_roots": {
+      "name": "Roots picture",
+      "asset": "roots.png",
+      "representation": "picture",
+      "subject": "roots"
+    },
+    "text_roots": {
+      "name": "Absorb Water",
+      "asset": "text-absorb-water.svg",
+      "representation": "text",
+      "subject": "roots"
+    },
+    "picture_stem": {
+      "name": "Stem picture",
+      "asset": "stem.png",
+      "representation": "picture",
+      "subject": "stem"
+    },
+    "text_stem": {
+      "name": "Support Plant",
+      "asset": "text-support-plant.svg",
+      "representation": "text",
+      "subject": "stem"
+    },
+    "picture_leaf": {
+      "name": "Leaf picture",
+      "asset": "leaf.png",
+      "representation": "picture",
+      "subject": "leaf"
+    },
+    "text_leaf": {
+      "name": "Make Food",
+      "asset": "text-make-food.svg",
+      "representation": "text",
+      "subject": "leaf"
+    },
+    "picture_flower": {
+      "name": "Flower picture",
+      "asset": "flower.png",
+      "representation": "picture",
+      "subject": "flower"
+    },
+    "text_flower": {
+      "name": "Make Fruit",
+      "asset": "text-make-fruit.svg",
+      "representation": "text",
+      "subject": "flower"
+    },
+    "picture_fruit": {
+      "name": "Fruit picture",
+      "asset": "fruit.png",
+      "representation": "picture",
+      "subject": "fruit"
+    },
+    "text_fruit": {
+      "name": "Protect Seeds",
+      "asset": "text-protect-seeds.svg",
+      "representation": "text",
+      "subject": "fruit"
+    },
+    "picture_seed": {
+      "name": "Seed picture",
+      "asset": "seed.png",
+      "representation": "picture",
+      "subject": "seed"
+    },
+    "text_seed": {
+      "name": "New Plant",
+      "asset": "text-new-plant.svg",
+      "representation": "text",
+      "subject": "seed"
+    },
+    "picture_bark": {
+      "name": "Bark picture",
+      "asset": "bark.png",
+      "representation": "picture",
+      "subject": "bark"
+    },
+    "text_bark": {
+      "name": "Outer Cover",
+      "asset": "text-outer-cover.svg",
+      "representation": "text",
+      "subject": "bark"
+    },
+    "picture_trunk": {
+      "name": "Trunk picture",
+      "asset": "trunk.png",
+      "representation": "picture",
+      "subject": "trunk"
+    },
+    "text_trunk": {
+      "name": "Hold Branches",
+      "asset": "text-hold-branches.svg",
+      "representation": "text",
+      "subject": "trunk"
+    },
+    "picture_mango": {
+      "name": "Mango picture",
+      "asset": "mango.png",
+      "representation": "picture",
+      "subject": "mango"
+    },
+    "text_mango": {
+      "name": "Tree",
+      "asset": "text-tree.svg",
+      "representation": "text",
+      "subject": "mango"
+    },
+    "picture_rose": {
+      "name": "Rose picture",
+      "asset": "rose.png",
+      "representation": "picture",
+      "subject": "rose"
+    },
+    "text_rose": {
+      "name": "Shrub",
+      "asset": "text-shrub.svg",
+      "representation": "text",
+      "subject": "rose"
+    },
+    "picture_tulsi": {
+      "name": "Tulsi picture",
+      "asset": "tulsi.png",
+      "representation": "picture",
+      "subject": "tulsi"
+    },
+    "text_tulsi": {
+      "name": "Shrub",
+      "asset": "text-shrub.svg",
+      "representation": "text",
+      "subject": "tulsi"
+    },
+    "picture_mint": {
+      "name": "Mint picture",
+      "asset": "mint.png",
+      "representation": "picture",
+      "subject": "mint"
+    },
+    "text_mint": {
+      "name": "Herb",
+      "asset": "text-herb.svg",
+      "representation": "text",
+      "subject": "mint"
+    },
+    "picture_tomato": {
+      "name": "Tomato picture",
+      "asset": "tomato.png",
+      "representation": "picture",
+      "subject": "tomato"
+    },
+    "text_tomato": {
+      "name": "Herb",
+      "asset": "text-herb.svg",
+      "representation": "text",
+      "subject": "tomato"
+    },
+    "picture_wheat": {
+      "name": "Wheat picture",
+      "asset": "wheat.png",
+      "representation": "picture",
+      "subject": "wheat"
+    },
+    "text_wheat": {
+      "name": "Grass",
+      "asset": "text-grass.svg",
+      "representation": "text",
+      "subject": "wheat"
+    },
+    "picture_moneyplant": {
+      "name": "Money Plant picture",
+      "asset": "moneyplant.png",
+      "representation": "picture",
+      "subject": "moneyplant"
+    },
+    "text_moneyplant": {
+      "name": "Climber",
+      "asset": "text-climber.svg",
+      "representation": "text",
+      "subject": "moneyplant"
+    },
+    "picture_pumpkin": {
+      "name": "Pumpkin picture",
+      "asset": "pumpkin.png",
+      "representation": "picture",
+      "subject": "pumpkin"
+    },
+    "text_pumpkin": {
+      "name": "Creeper",
+      "asset": "text-creeper.svg",
+      "representation": "text",
+      "subject": "pumpkin"
+    }
+  },
+  "rounds": [
+    {
+      "id": "1",
+      "title": "Plant parts and their jobs",
+      "pairs": [
+        [
+          "roots",
+          "picture_roots",
+          "text_roots"
+        ],
+        [
+          "stem",
+          "picture_stem",
+          "text_stem"
+        ],
+        [
+          "leaf",
+          "picture_leaf",
+          "text_leaf"
+        ],
+        [
+          "flower",
+          "picture_flower",
+          "text_flower"
+        ]
+      ]
+    },
+    {
+      "id": "2",
+      "title": "More plant parts",
+      "pairs": [
+        [
+          "fruit",
+          "picture_fruit",
+          "text_fruit"
+        ],
+        [
+          "seed",
+          "picture_seed",
+          "text_seed"
+        ],
+        [
+          "bark",
+          "picture_bark",
+          "text_bark"
+        ],
+        [
+          "trunk",
+          "picture_trunk",
+          "text_trunk"
+        ]
+      ]
+    },
+    {
+      "id": "3",
+      "title": "Meet the plant types",
+      "pairs": [
+        [
+          "mango",
+          "picture_mango",
+          "text_mango"
+        ],
+        [
+          "rose",
+          "picture_rose",
+          "text_rose"
+        ],
+        [
+          "mint",
+          "picture_mint",
+          "text_mint"
+        ],
+        [
+          "wheat",
+          "picture_wheat",
+          "text_wheat"
+        ]
+      ]
+    },
+    {
+      "id": "4",
+      "title": "More plant types",
+      "pairs": [
+        [
+          "tulsi",
+          "picture_tulsi",
+          "text_tulsi"
+        ],
+        [
+          "tomato",
+          "picture_tomato",
+          "text_tomato"
+        ],
+        [
+          "moneyplant",
+          "picture_moneyplant",
+          "text_moneyplant"
+        ],
+        [
+          "pumpkin",
+          "picture_pumpkin",
+          "text_pumpkin"
+        ]
+      ]
+    },
+    {
+      "id": "5",
+      "title": "Plant review",
+      "pairs": [
+        [
+          "roots",
+          "picture_roots",
+          "text_roots"
+        ],
+        [
+          "stem",
+          "picture_stem",
+          "text_stem"
+        ],
+        [
+          "leaf",
+          "picture_leaf",
+          "text_leaf"
+        ],
+        [
+          "flower",
+          "picture_flower",
+          "text_flower"
+        ],
+        [
+          "mango",
+          "picture_mango",
+          "text_mango"
+        ],
+        [
+          "rose",
+          "picture_rose",
+          "text_rose"
+        ],
+        [
+          "mint",
+          "picture_mint",
+          "text_mint"
+        ],
+        [
+          "wheat",
+          "picture_wheat",
+          "text_wheat"
+        ]
+      ]
+    },
+    {
+      "id": "6",
+      "title": "Plant explorer challenge",
+      "pairs": [
+        [
+          "fruit",
+          "picture_fruit",
+          "text_fruit"
+        ],
+        [
+          "seed",
+          "picture_seed",
+          "text_seed"
+        ],
+        [
+          "bark",
+          "picture_bark",
+          "text_bark"
+        ],
+        [
+          "trunk",
+          "picture_trunk",
+          "text_trunk"
+        ],
+        [
+          "tulsi",
+          "picture_tulsi",
+          "text_tulsi"
+        ],
+        [
+          "tomato",
+          "picture_tomato",
+          "text_tomato"
+        ],
+        [
+          "moneyplant",
+          "picture_moneyplant",
+          "text_moneyplant"
+        ],
+        [
+          "pumpkin",
+          "picture_pumpkin",
+          "text_pumpkin"
+        ]
+      ]
+    }
+  ]
+}
