@@ -49,7 +49,7 @@
   },
   "progression": {
     "xp": {
-      "ruleVersion": 2,
+      "ruleVersion": 3,
       "cap": 200,
       "claimBy": [
         "difficulty",
